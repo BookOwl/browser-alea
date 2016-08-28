@@ -1,6 +1,6 @@
 # Alea
 
-A simple copy-and-paste implementation of Johannes Baagøe's Alea PRNG
+A simple copy-and-paste implementation of Johannes Baagøe's Alea PRNG modified to work in the browser.
 
 Mostly packaged so I can easily include it in my projeccts. Nothing more
 
@@ -8,12 +8,10 @@ JavaScript's Math.random() is fast, but has problems. First, it isn't seedable, 
 
 ## Installation
 
-	npm install alea
+	Link to alea.js in your html file.
 
 ## Usage
 
-	var Alea = require('alea')
-	
 	var prng = new Alea() // add an optional seed param
 
 	var nextRandnum = prng() // just call the return value of Alea

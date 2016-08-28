@@ -1,11 +1,5 @@
 (function (root, factory) {
-  if (typeof exports === 'object') {
-      module.exports = factory();
-  } else if (typeof define === 'function' && define.amd) {
-      define(factory);
-  } else {
-      root.Alea = factory();
-  }
+  window.Alea = factory();
 }(this, function () {
 
   'use strict';
@@ -63,7 +57,7 @@
         return random() * 0x100000000; // 2^32
       };
       random.fract53 = function() {
-        return random() + 
+        return random() +
           (random() * 0x200000 | 0) * 1.1102230246251565e-16; // 2^-53
       };
       random.version = 'Alea 0.9';
@@ -79,7 +73,7 @@
         s2 = +i[2] || 0;
         c = +i[3] || 0;
       };
- 
+
       return random;
 
     } (Array.prototype.slice.call(arguments)));
